@@ -1,4 +1,4 @@
-export function viewHome() {
+export function renderHome() {
   return `
       <!-- Navbar -->
   <header class="bg-white shadow">
@@ -11,10 +11,8 @@ export function viewHome() {
 
       <!-- Navegación -->
       <nav class="space-x-6 text-sm text-gray-700">
-        <a href="#" class="hover:text-indigo-700">Inicio</a>
-        <a href="#" class="hover:text-indigo-700">Catálogo</a>
-        <a href="#" class="hover:text-indigo-700">Autores</a>
-        <a href="#" class="hover:text-indigo-700">Contacto</a>
+        <a href="/login" class="hover:text-indigo-700">Login</a>
+        <a href="/register" class="hover:text-indigo-700" data-link>Register</a>
       </nav>
     </div>
   </header>

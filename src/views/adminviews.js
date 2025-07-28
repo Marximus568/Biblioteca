@@ -1,19 +1,6 @@
-export function viewHome() {
+export function adminViews() {
   return `
   <body class="bg-gray-100 min-h-screen flex">
-
-    <!-- Sidebar -->
-    <aside class="w-64 bg-white shadow-lg hidden md:block">
-      <div class="p-6 border-b">
-        <h1 class="text-xl font-bold text-indigo-600">AdminPanel</h1>
-      </div>
-      <nav class="mt-6">
-        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-100 hover:text-indigo-600 font-medium">Dashboard</a>
-        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-100 hover:text-indigo-600 font-medium">Usuarios</a>
-        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-100 hover:text-indigo-600 font-medium">Productos</a>
-        <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-100 hover:text-indigo-600 font-medium">Configuración</a>
-      </nav>
-    </aside>
 
     <!-- Contenido Principal -->
     <div class="flex-1 flex flex-col">

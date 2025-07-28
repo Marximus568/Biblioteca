@@ -1,0 +1,52 @@
+import { settingLogin } from "../js/login";
+import { adminViews } from "../views/adminviews";
+import { renderHome } from "../views/home";
+import { login } from "../views/login";
+import { register } from "../views/register";
+
+
+const routes = {
+  "/": {
+    showView: renderHome(),
+    afterRender: null,
+    private: false,
+  },
+  "/login": {
+    showView: login(),
+    afterRender: settingLogin(),
+    private: false,
+  },
+  "/register": {
+    showView: register(),
+    afterRender: null,
+    private: false,
+  },
+"/customerviews": {
+    showView: null,
+    afterRender: null,
+    private: false,
+  },
+  "/adminviews": {
+    showView: adminViews(),
+    afterRender: null,
+    private: false,
+  },
+};
+
+export function router() {
+  //Con la variable path obtienes la url.
+  const path = window.location.pathname || "/";
+  //Con esta vaariable obtenemos app que se encuentra en el index
+  const app = document.getElementById('app');
+  //Con esto se conoce cual es la ruta actual para renderizar la vista correspondiente
+  const currentRoute = routes[path];
+  
+if (currentRoute) {
+  app.innerHTML = currentRoute.showView;
+  if (typeof currentRoute.after === "function") {
+    currentRoute.afterRender();
+  }
+}
+
+}
+
