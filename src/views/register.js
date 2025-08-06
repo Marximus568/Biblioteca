@@ -56,7 +56,7 @@ export function register() {
 
     <p class="mt-10 text-center text-sm/6 text-gray-500">
       Already have an account?
-      <a href="/login" class="font-semibold text-indigo-600 hover:text-indigo-500">Sign in here</a>
+      <a href="/login" data-link class="font-semibold text-indigo-600 hover:text-indigo-500">Sign in here</a>
     </p>
   </div>
 </div>

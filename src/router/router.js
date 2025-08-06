@@ -1,12 +1,19 @@
+import { settingsAdmin } from "../js/admin";
 import { settingLogin } from "../js/login";
 import { adminViews } from "../views/adminviews";
 import { renderHome } from "../views/home";
 import { login } from "../views/login";
+import { notFound } from "../views/notFound";
 import { register } from "../views/register";
 
 
 const routes = {
   "/": {
+    showView: renderHome(),
+    afterRender: null,
+    private: false,
+  },
+  "/home": {
     showView: renderHome(),
     afterRender: null,
     private: false,
@@ -28,7 +35,12 @@ const routes = {
   },
   "/adminviews": {
     showView: adminViews(),
-    afterRender: null,
+    afterRender: settingsAdmin(),
+    private: false,
+  },
+  "/notFound": {
+    showView: notFound(),
+    afterRender: "",
     private: false,
   },
 };
@@ -46,7 +58,8 @@ if (currentRoute) {
   if (typeof currentRoute.after === "function") {
     currentRoute.afterRender();
   }
-}
+}else
+  app.innerHTML = notFound();
 
 }
 

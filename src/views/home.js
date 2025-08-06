@@ -11,8 +11,8 @@ export function renderHome() {
 
       <!-- Navegación -->
       <nav class="space-x-6 text-sm text-gray-700">
-        <a href="/login" class="hover:text-indigo-700">Login</a>
-        <a href="/register" class="hover:text-indigo-700" data-link>Register</a>
+        <a href="/login" data-link class="hover:text-indigo-700">Login</a>
+        <a href="/register" data-link class="hover:text-indigo-700" data-link>Register</a>
       </nav>
     </div>
   </header>
