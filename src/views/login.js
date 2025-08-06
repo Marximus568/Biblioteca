@@ -7,7 +7,7 @@ export function login() {
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form action="#" method="POST" class="space-y-6">
+    <form class="space-y-6">
       <div>
         <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
         <div class="mt-2">
@@ -25,13 +25,13 @@ export function login() {
       </div>
 
       <div>
-        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+        <a href="/adminviews" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</a>
       </div>
     </form>
 
     <p class="mt-10 text-center text-sm/6 text-gray-500">
       Not a member?
-      <a href="/register" class="font-semibold text-indigo-600 hover:text-indigo-500">Register</a>
+      <a href="/register" data-link class="font-semibold text-indigo-600 hover:text-indigo-500">Register</a>
     </p>
   </div>
 </div>`;
